@@ -8,9 +8,12 @@
     <title>Tittle</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./Asset/Style/Stylesheet.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
+
+  <
 <main>
+  <body>
   <section class="hero is-primary is-medium">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
@@ -18,12 +21,10 @@
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item">
-              <img src="#placeholder" alt="Logo" width="" height="">
+              <img src="assets/images/icon.jpg" alt="icon" width="200" height="200">
             </a>
             <span class="navbar-burger" data-target="navbarMenuHeroA">
-              <span></span>
-              <span></span>
-              <span></span>
+              
             </span>
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
@@ -38,12 +39,7 @@
                 Documentation
               </a>
               <span class="navbar-item">
-                <a class="button is-primary is-inverted">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Download</span>
-                </a>
+                
               </span>
             </div>
           </div>
@@ -54,12 +50,9 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
-        <p class="title">
+        <h2>
           Tittle App
-        </p>
-        <p class="subtitle">
-          Subtitle
-        </p>
+        </h2>
       </div>
     </div>
   
@@ -68,50 +61,62 @@
       <nav class="tabs">
         <div class="container">
           <ul>
-            <li class="is-active"><a>Overview</a></li>
-            <li><a>Modifiers</a></li>
-            <li><a>Grid</a></li>
-            <li><a>Elements</a></li>
-            <li><a>Components</a></li>
-            <li><a>Layout</a></li>
+            <li><a>Playlist</a></li>
+            <li><a>Theme</a></li>
+            <li><a>Icon</a></li>
+            <li><a>Info</a></li>
           </ul>
         </div>
       </nav>
     </div>
   </section>
-<section class="input-1">
+<section class="input-1" type="text" label="first">
   <p>Starting Location:</p>
   <input class="input is-rounded" type="text">
 </section>
 
 <section class="input-2">
   <p>Destination:</p>
-  <input class="input is-rounded" type="text">
+  <input class="input is-rounded" type="text" label="second">
 </section>
 
+<!--Trigger for modal-->
+
+<button class="button is-link is-rounded" id="trigger" data-target="modal-js-example">
+  Search
+ </button>
+
+
 <!--Following code is the modal-->
-<div class="modal">
+<div class="modal ">
   <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Modal title</p>
-      <button class="delete" aria-label="close"></button>
-    </header>
-    <section class="modal-card-body">
-      <!-- Content ... -->
-    </section>
 
-    
-    <footer class="modal-card-foot">
-      <button class="button is-success">Save changes</button>
-      <button class="button">Cancel</button>
-    </footer>
+  <div class="modal-content">
+    <div class="box">
+      <!-- Your content -->
+      <p>Playlist:</p>
+
+      <ol>
+
+  <li>Pop</li>
+  <li>Indie</li>
+  <li>Rap</li>
+  <li>Jazz</li>
+  <li>Country</li>
+
+      </ol>
+
+     
+    </div>
   </div>
+
+  <button id="close-modal" class="modal-close is-large" aria-label="close"></button>
 </div>
-
-<button class="button is-link is-rounded">Search</button>
-
+<!--img available via wallpaper access.com-->
+<img src="assets/images/backgroundimg.jpg" id="bg-image" alt="image of a road leading into the mountains">
+</body>
 </main>
+
 <!--Main page footer-->
 <footer >
   A No$leep Production
@@ -119,6 +124,6 @@
 
 
 
-	<script href="./Asset/Logic/javascript.js"></script>
+	<script src="./assets/js/modal.js"></script>
   </body>
 </html>

@@ -1,0 +1,63 @@
+* {}
+
+h2 {
+    font-size: 40px;
+    color:rgb(123, 0, 255)
+}
+
+
+
+img {
+    margin: 10%;
+}
+
+#bg-image{
+    justify-content: center;
+    max-width: 50%;
+}
+
+.input-1{
+    width: 30%;
+    margin-left: 5%;
+}
+.input-2{
+    width: 30%;
+    margin-left: 5%;
+}
+button{
+    margin-top: 1%;
+    margin-left: 5%;
+    
+}
+
+/*Footer selector*/
+footer {
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 45%;
+}
+
+/*Query selectors for responsive ui*/
+@media all and (max-width:768px) {
+  body{
+    max-width:100%;
+  }
+  h2 {
+    color:red;
+  }
+    #bg-image{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    body{
+        width: 100%;
+    }
+    h2 {
+        color:blue;
+    }
+    #bg-image{
+        width: 100%;
+    }
+}
