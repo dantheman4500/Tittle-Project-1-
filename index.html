@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Tittle</title>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
 
-  <
 <main>
   <body>
   <section class="hero is-primary is-medium">
@@ -21,25 +20,12 @@
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item">
-              <img src="assets/images/icon.jpg" alt="icon" width="200" height="200">
+              <span class="material-symbols-rounded" id="icon" alt="car icon via google fonts">
+                directions_car
+                </span>
             </a>
             <span class="navbar-burger" data-target="navbarMenuHeroA">
-              
             </span>
-          </div>
-          <div id="navbarMenuHeroA" class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item is-active">
-                Home
-              </a>
-              <a class="navbar-item">
-                Examples
-              </a>
-              <a class="navbar-item">
-                Documentation
-              </a>
-              <span class="navbar-item">
-                
               </span>
             </div>
           </div>
@@ -60,16 +46,15 @@
     <div class="hero-foot">
       <nav class="tabs">
         <div class="container">
-          <ul>
-            <li><a>Playlist</a></li>
-            <li><a>Theme</a></li>
-            <li><a>Icon</a></li>
-            <li><a>Info</a></li>
-          </ul>
+            <button class="button is-info is-rounded">Car</button>
+            <button class="button is-info is-rounded">Bus</button>
+            <button class="button is-info is-rounded">Walking</button>
         </div>
       </nav>
     </div>
   </section>
+
+  <div class="bottom-half">
 <section class="input-1" type="text" label="first">
   <p>Starting Location:</p>
   <input class="input is-rounded" type="text">
@@ -80,50 +65,38 @@
   <input class="input is-rounded" type="text" label="second">
 </section>
 
-<!--Trigger for modal-->
-
-<button class="button is-link is-rounded" id="trigger" data-target="modal-js-example">
-  Search
- </button>
-
-
 <!--Following code is the modal-->
-<div class="modal ">
-  <div class="modal-background"></div>
 
-  <div class="modal-content">
-    <div class="box">
-      <!-- Your content -->
-      <p>Playlist:</p>
-
-      <ol>
-
-  <li>Pop</li>
-  <li>Indie</li>
-  <li>Rap</li>
-  <li>Jazz</li>
-  <li>Country</li>
-
-      </ol>
-
-     
-    </div>
-  </div>
-
-  <button id="close-modal" class="modal-close is-large" aria-label="close"></button>
+<button class="button is-link is-rounded js-modal-trigger" id="trigger" data-target="modal-js-example">Search</button>
+<div id="modal-js-example" class="modal">
+<div class="modal-background"></div>
+<div class="modal-content">
+<div class="modal-card-head">
+  <p class="modal-card-title">Make your selections</p>
+  <button class="delete" aria-label="close"></button>
 </div>
-<!--img available via wallpaper access.com-->
-<img src="assets/images/backgroundimg.jpg" id="bg-image" alt="image of a road leading into the mountains">
-</body>
+</header>
+<form id="modal-content" class="modal-card-body">
+  <!-- Content ... -->
+  <ul><label class="checkbox">
+    <input type="checkbox" value="rap">Rap</label></ul>
+  <ul><label class="checkbox">
+    <input type="checkbox" value="hiphop">Hip Hop</label></ul>
+  <ul><label class="checkbox">
+    <input type="checkbox" value="rock">Rock</label></ul>
+  <ul><label class="checkbox">
+    <input type="checkbox" value="jazz">Jazz</label></ul>
+<footer class="modal-card-footer">
+  <button id="success">Save</button>
+</footer>
+</form>
 </main>
 
 <!--Main page footer-->
-<footer >
+<footer>
   A No$leep Production
 </footer>
 
-
-
-	<script src="./assets/js/modal.js"></script>
+	<script src="./assets/js/test.js"></script>
   </body>
 </html>
