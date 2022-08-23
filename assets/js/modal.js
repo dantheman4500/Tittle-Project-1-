@@ -12,6 +12,6 @@ modal.classList.add('is-active');
 modalBg.addEventListener('click', () => {
   modal.classList.remove('is-active');
 });
-mClose.addEventListener('click', () => {
-  modal.classList.remove('is-active');
-});
+// mClose.addEventListener('click', () => {
+//   modal.classList.remove('is-active');
+// });
