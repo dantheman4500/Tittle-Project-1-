@@ -1,5 +1,9 @@
 var search = document.getElementById("modal-content");
 var success = document.getElementById("success");
+var form = document.getElementById("StartCity")
+var staringLocation = document.getElementById("endCity")
+var endLocation = document.getElementById("inputButton")
+var inputBtn = document.getElementById("form")
 //lastFM api key: bd89cc2a593abd86e04ed01d5d0b7d7f
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,4 +57,98 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     console.log(generalSelected);
 
+  });
+
+
+// ---------------- Search Auto complete --------------//
+
+function bingMapsReady() {
+  Microsoft.Maps.loadModule("Microsoft.Maps.AutoSuggest", {
+    callback: onLoad,
+    credentials: 'AhY96IWC3yKWC_QLEHXFNfqY-xMFORlc9M8RPDG4YPiyzqM__YEPn42iuFQjJ5hR'
+  });
+
+  function onLoad() {
+    var options = { maxResults: 5 };
+    initAutosuggestControl(options, "StartCity", "searchBoxContainer" ,);
+    initAutosuggestControl(options, "endCity", "searchBoxContainerAlt");
+  }
+}
+function initAutosuggestControl(
+  options,
+  suggestionBoxId,
+  suggestionContainerId,
+) {
+  var manager = new Microsoft.Maps.AutosuggestManager(options);
+  manager.attachAutosuggest(
+    "#" + suggestionBoxId,
+    "#" + suggestionContainerId,
+    selectedSuggestion,
+  );
+  
+  var Obj = {};
+  var Box = suggestionBoxId;
+  var arr= [];
+  Obj[Box]= arr;
+
+ function selectedSuggestion(suggestionResult) {
+   var lat = suggestionResult.location.latitude;
+   var lot = suggestionResult.location.longitude;
+   console.log(suggestionResult)
+  arr.push(lat,lot).value
+  console.log(Obj)
+    
+  };
+}
+// ---------------------------------------------------//
+// key  = 'AhY96IWC3yKWC_QLEHXFNfqY-xMFORlc9M8RPDG4YPiyzqM__YEPn42iuFQjJ5hR';
+
+// distanceAPI="http://dev.virtualearth.net/REST/v1/Routes?" ;
+
+// dateTime = 08/22/2022 ; 
+
+// travelMode = Driving
+
+
+fetch( "http://dev.virtualearth.net/REST/v1/Routes?key=AhY96IWC3yKWC_QLEHXFNfqY-xMFORlc9M8RPDG4YPiyzqM__YEPn42iuFQjJ5hR&dateTime=08%2F22%2F2022&waypoint.1=33.8628,%20-118.003%5B1%5D&waypoint.2=33.6859,%20-117.825%5B2%5D&optimize=time%20&time%20=distance")
+  .then(function (response) {
+    return response.json();
   })
+  .then(function (object) {
+    console.log(object);
+  });
+
+
+
+// --------------------------Distance Matrix -------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
