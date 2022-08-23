@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <title>Tittle</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-  </head>
+    <link rel="stylesheet" href="./assets/images/backgroundimg.jpg">
+    <link rel="stylesheet" href="./assets/images/icon.jpg">
 
+
+  </head>
 <main>
   <body>
   <section class="hero is-primary is-medium">
@@ -20,7 +22,7 @@
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item">
-              <span class="material-symbols-rounded" id="icon" alt="car icon via google fonts">
+              <span class="material-symbols-rounded" alt="car icon via google fonts">
                 directions_car
                 </span>
             </a>
@@ -32,7 +34,6 @@
         </div>
       </nav>
     </div>
-  
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -41,7 +42,6 @@
         </h2>
       </div>
     </div>
-  
     <!-- Hero footer: will stick at the bottom -->
     <div class="hero-foot">
       <nav class="tabs">
@@ -54,19 +54,21 @@
     </div>
   </section>
 
-  <div class="bottom-half">
-<section class="input-1" type="text" label="first">
-  <p>Starting Location:</p>
-  <input class="input is-rounded" type="text">
-</section>
 
-<section class="input-2">
-  <p>Destination:</p>
-  <input class="input is-rounded" type="text" label="second">
-</section>
+<form id="form" class="bottom-half" >
+  <div class="form-group">
+    <label for="searchBox">StartCity</label>
+  <div id="searchBoxContainer" class="input is-rounded"><input value="" type="text" id="StartCity" /></div>
+  </div>
+  <div class="form-group">
+        <label for="searchBoxAlt">EndCity</label>
+        <div id="searchBoxContainerAlt"  class="input is-rounded" ><input  value="" type="text" id="endCity" /></div>
+  </div>
+</form>
 
+
+<!--Trigger for modal-->
 <!--Following code is the modal-->
-
 <button class="button is-link is-rounded js-modal-trigger" id="trigger" data-target="modal-js-example">Search</button>
 <div id="modal-js-example" class="modal">
 <div class="modal-background"></div>
@@ -76,27 +78,34 @@
   <button class="delete" aria-label="close"></button>
 </div>
 </header>
-<form id="modal-content" class="modal-card-body">
+<!------------------------ Updated Form-------------------  -->
+<form  id="modal-content" class="modal-card-body">
   <!-- Content ... -->
   <ul><label class="checkbox">
-    <input type="checkbox" value="rap">Rap</label></ul>
+    <input type="checkbox" names="checkbox" value="rap">Rap</label></ul>
   <ul><label class="checkbox">
-    <input type="checkbox" value="hiphop">Hip Hop</label></ul>
+    <input type="checkbox"  names="checkbox" value="hiphop">Hip Hop</label></ul>
   <ul><label class="checkbox">
-    <input type="checkbox" value="rock">Rock</label></ul>
+    <input type="checkbox"  names="checkbox" value="rock">Rock</label></ul>
   <ul><label class="checkbox">
-    <input type="checkbox" value="jazz">Jazz</label></ul>
-<footer class="modal-card-footer">
-  <button id="success">Save</button>
+    <input type="checkbox" names="checkbox"  value="jazz">Jazz</label></ul>
+<footer class="modal-card-foot">
+  <input type="submit" id="submit" value="submit"></input>
 </footer>
 </form>
 </main>
+<!-- ------------------------------------------------- -->
 
 <!--Main page footer-->
-<footer>
+<footer >
   A No$leep Production
 </footer>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/modal.js"></script>
 
-	<script src="./assets/js/test.js"></script>
+  <script
+type="text/javascript" 
+src="https://www.bing.com/api/maps/mapcontrol?callback=bingMapsReady"
+async defer></script>;
   </body>
 </html>

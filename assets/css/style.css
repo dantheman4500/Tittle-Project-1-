@@ -1,3 +1,4 @@
+* {}
 
 h2 {
     font-size: 40px;
@@ -7,40 +8,31 @@ h2 {
 #icon {
     margin: 10%;
 }
-body{
-    background-color: hsl(171, 100%, 41%);
-}
-.bottom-half {
-    background-image: url(../images/backgroundimg.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    height: 500px;
-    width: 100%;
+
+#bg-image{
+    justify-content: center;
+    max-width: 50%;
 }
 
 .input-1{
     width: 30%;
     margin-left: 5%;
 }
-
 .input-2{
     width: 30%;
     margin-left: 5%;
 }
-
 button{
     margin-top: 1%;
     margin-left: 5%;
     
 }
-.hero-foot{
-    margin-bottom: 1%;
-}
+
 /*Footer selector*/
 footer {
-    margin-top:0%;
-margin-left: 45%;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 45%;
 }
 
 /*Query selectors for responsive ui*/
