@@ -15,3 +15,6 @@ Trying to find a suitable API that doesn’t charge to use it, and actually supp
 Figuring out how to fetch and utilize API’s to support the app
 Getting the API to throw proper data back to the javascript
 Utilize API properly
+
+
+link to powerpoint presentation: https://docs.google.com/presentation/d/13wTFZNU_OR4EwHNjJjNANDonZrwKJbUI23Z23J3D7HA/edit#slide=id.p
